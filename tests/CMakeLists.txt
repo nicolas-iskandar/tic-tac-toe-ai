@@ -6,7 +6,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-add_executable(tictactoe_tests test_tictactoe.cpp ../src/tictactoe.cpp)
+add_executable(tictactoe_tests test_tictactoe.cpp test_ai_player.cpp ../src/tictactoe.cpp ../src/ai_player.cpp)
 target_include_directories(tictactoe_tests PRIVATE ../include)
 target_link_libraries(tictactoe_tests gtest_main)
 

@@ -1,7 +1,6 @@
 #pragma once
 #include <limits>
 #include <string>
-#include <vector>
 
 const int ROWS = 3;
 const int COLS = 3;
@@ -16,11 +15,4 @@ char get_winner(const char board[ROWS][COLS]);
 bool row_contains_winner(const char row[COLS]);
 bool col_contains_winner(const char board[ROWS][COLS], const int &c);
 bool diagonal_contains_winner(const char board[ROWS][COLS]);
-
 char player_turn(const char board[ROWS][COLS]);
-std::vector<std::pair<int, int>> actions(const char board[ROWS][COLS]);
-bool terminal(const char board[ROWS][COLS]);
-int utility(const char board[ROWS][COLS]);
-std::pair<int, int> minimax(const char board[ROWS][COLS], char current_player);
-int max_value(char board[ROWS][COLS]);
-int min_value(char board[ROWS][COLS]);
